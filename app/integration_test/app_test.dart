@@ -14,7 +14,7 @@ void main() {
       await binding.convertFlutterSurfaceToImage();
       await widgetTester.pumpAndSettle();
 
-      final itemList = await find.byKey(itemListKey).first;
+      final itemList = find.byKey(itemListKey).first;
       expect(itemList, findsOneWidget);
 
       await binding.takeScreenshot('screenshot-1');
