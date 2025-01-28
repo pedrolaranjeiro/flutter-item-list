@@ -10,11 +10,12 @@ class ItemsProvider {
     try {
       final response = await dio.get(apiItemsUrl);
       if (response.data == null) {
+        // If the respinse is null, throw invalid reponse error
         throw InvalidResponseError();
       }
       return (response.data as List).map((e) => Item.fromMap(e)).toList();
     } on Exception catch (e) {
-      e;
+      // throw error when payload fails to be decoded
       throw InvalidPayloadError();
     }
   }

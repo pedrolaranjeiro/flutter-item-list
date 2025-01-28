@@ -9,6 +9,7 @@ class ItemsCubit extends Cubit<ItemsState> {
 
   ItemsCubit(this.itemRepository) : super(Initial());
 
+  // Get items from repository.
   Future<void> getItems() async {
     emit(Loading());
     try {
