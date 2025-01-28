@@ -17,7 +17,7 @@ void main() {
       final itemList = find.byKey(itemListKey).first;
       expect(itemList, findsOneWidget);
 
-      await binding.takeScreenshot('screenshot-1');
+      await binding.takeScreenshot('screenshots/screenshot-1');
     });
   });
 }
