@@ -5,7 +5,7 @@ This test is composed of two modules:
 - Backend: Kotlin with Ktor Framework 
 - App: Flutter with Bloc
 
-The frontend follows the Flutter Architecture described [here](https://docs.flutter.dev/app-architecture)
+The frontend follows the Bloc Architecture described [here](https://bloclibrary.dev/architecture/)
 
 
 ## Backend
