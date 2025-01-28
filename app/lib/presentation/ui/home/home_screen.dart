@@ -26,16 +26,19 @@ class HomeScreen extends StatelessWidget {
     }));
   }
 
-  Center buildError() {
-    return const Center(
-        child: Text(
-            "There was an error getting the items. Please try again later"),
-      );
+  Widget buildError() {
+    return const Padding(
+      padding: EdgeInsets.all(32),
+      child: Center(
+          child: Text(
+              "There was an error getting the items. Is the server running?"),
+        ),
+    );
   }
 
-  Center buildLoading() => const Center(child: CircularProgressIndicator(key: loadingKey,));
+  Widget buildLoading() => const Center(child: CircularProgressIndicator(key: loadingKey,));
 
-  ListView buildList(Items state) {
+  Widget buildList(Items state) {
     return ListView.builder(
         key: itemListKey,
         itemCount: state.items.length,
