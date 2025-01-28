@@ -1,0 +1,1 @@
+java -jar backend/dist/backend-all.jar

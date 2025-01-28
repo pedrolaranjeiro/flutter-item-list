@@ -9,21 +9,22 @@ The frontend follows the Bloc Architecture described [here](https://bloclibrary.
 
 
 ## Backend
-Gradle is used to get dependencies and build the project. To quickly run the project, navigate to backend folder and 
-execute the command:
+The project utilizes Gradle for dependency management and building processes. For convenience, a precompiled JAR file and a shell script are included to allow for quick execution of the project.
+
+To start the server, execute the following command from the root directory of the project:
 ```
-sh run.sh
+sh run-server.sh
 ``` 
-This command will compile and start the server. If you want to compile and run the server manually follow the next set of instructions.
+If you want to compile and run the server manually follow the next set of instructions.
 
 #### Compile
-To create a runnable jar, navigate to the root of the backend project and execute the following command 
+To generate a runnable JAR file, navigate to the backend directory and execute the following command:
 ```
 ./gradlew clean buildFatJar
 ```
 
 #### Run Server
-On the root of the backend project run the command to execute the server
+On the backend folder, execute the following command to start the server:
 ```
 java -jar build/libs/backend-all.jar
 ```
@@ -32,6 +33,7 @@ You can also navigate `build/libs/` and execute `java -jar backend-all.jar`. The
 
 
 ### Add Item
+To add an Item to the server via the terminal, you can use the curl command. Modify the title and description as needed to suit your preferences.
 ```
 curl --location 'http://localhost:9999/items' \
 --header 'Content-Type: application/json' \
@@ -42,8 +44,12 @@ curl --location 'http://localhost:9999/items' \
 ```
 
 ### Get items
+To retrieve an item from the server, use the following curl command:
+
 ```
 curl --location 'http://localhost:9999/items'
 ```
 
 ## App
+### Visual Studio Code
+The application was developed using Visual Studio Code, and a launch.json file has been included for your convenience. To run the app, start Visual Studio code 
