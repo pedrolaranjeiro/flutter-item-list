@@ -100,3 +100,21 @@ To run the Flutter app without an IDE, a script has been provided for your conve
 ```
 sh run-app.sh
 ```
+
+
+## Unit tests
+The unit tests are located in the `app/test` folder and test the item cubit class. Due to the Clean Architecture guidelines, the `ItemRepository` is an interface and can be mocked to focus the test in the ItemsCubit logic. I could have used a library like Mockito to have more control on the mock behaviour but for simplicity I created a stub version of the ItemRepository. The unit test can be executed from the app folder using the command
+```
+sh run_unit_tests.sh 
+```
+
+
+
+## Integration Tests
+The integration tests are located in the `app/integration_test` folder and use the driver defined in `app/test_driver`. The driver is useful for extra features. In this particular case, I am using it to take a screenshot when the test completes. The screenshot will be in `app/screenshots/`.
+
+To run the integration tests, a server must be running and a device must be connected to the computer (either physical or emulated device). Run the script from the app folder to execute the integration tests.
+
+```
+sh run_integration_tests.sh 
+```
