@@ -65,8 +65,7 @@ To configure the app to access the server, the configuration file must be update
 
 Ensure that the correct server URL is specified to enable proper communication between the app and the server.
 ```
-//
- config.dart
+// config.dart
 const String apiUrl = "http://<server-ip>:9999";
 const String apiItemsUrl = "$apiUrl/items";
 ```
