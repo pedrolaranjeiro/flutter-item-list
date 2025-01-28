@@ -81,7 +81,7 @@ Depending on the device where the app is running, the IP address of the server m
 [^1]: 10.0.2.2 is a special IP address that allows the Android emulator to access a server running on the same machine. Please note that 0.0.0.0 **DOES NOT WORK** on Android, and should not be used for this purpose.
 
 ### Visual Studio Code
-The application was developed using Visual Studio Code, and a launch.json file has been included for your convenience.
+The application was developed using Visual Studio Code, and a launch.json file has been included.
 
 To run the application:
 - Open Visual Studio Code.
