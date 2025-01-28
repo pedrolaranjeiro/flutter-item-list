@@ -1,4 +1,5 @@
 val ktor_version: String by project
+val logback_version: String by project
 
 plugins {
     kotlin("jvm") version "1.9.21"
@@ -23,6 +24,7 @@ dependencies {
     implementation("io.ktor:ktor-server-content-negotiation:$ktor_version")
     implementation("io.ktor:ktor-serialization-jackson:$ktor_version")
     implementation("io.ktor:ktor-server-status-pages:$ktor_version")
+    implementation("ch.qos.logback:logback-classic:$logback_version")
 
     testImplementation(kotlin("test"))
 }
